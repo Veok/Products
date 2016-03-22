@@ -25,14 +25,9 @@ public class Cart {
         return totalPrice;
     }
 
-    public void applyDiscount300plus(){
 
-      if(getTotalPrice() > 300){
-          for(Product product : products){
-              double price = product.getPrice();
-              product.setDiscountPrice(0.95*price);
-          }
-        }
+    public List<Product> getProducts(){
+        return products;
     }
 
     public void applyDiscountThirdForFree(){
@@ -67,7 +62,11 @@ public class Cart {
         }
     }
 
-
+public void applyDiscount(ICanCalculateSpecialOffer specialOffer){
+    if (specialOffer.canCalculate(this)){
+        specialOffer.calculateOffer(this);
+    }
+}
 
 }
 

@@ -32,10 +32,9 @@ public class Main {
 
 
 		System.out.println("Cart after discount: ");
-		cart.applyDiscount300plus();
-		cart.applyFreeCup();
-		cart.applyDiscountThirdForFree();
-		cart.applyVoucher(product2);
+		ICanCalculateSpecialOffer specialOffer = new Discount300Plus();
+
+
 		cart.printCart();
 
 
