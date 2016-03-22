@@ -30,23 +30,6 @@ public class Cart {
         return products;
     }
 
-    public void applyDiscountThirdForFree(){
-        if(products.size() == 3){
-            Product cheapest = ProductManager.getCheapest(products);
-            cheapest.setDiscountPrice(0);
-        }
-    }
-
-    public void applyFreeCup(){
-
-        if(getTotalPrice() > 200) {
-            Product product4 = new Product();
-            product4.setCode("code4");
-            product4.setName("Cup");
-            product4.setPrice(0);
-            products.add(product4);
-        }
-    }
 
     public void applyVoucher(Product product){
 
