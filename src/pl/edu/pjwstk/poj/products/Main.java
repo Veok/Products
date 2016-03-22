@@ -42,7 +42,6 @@ public class Main {
 		ICanCalculateSpecialOffer specialOffer2 = new ApplyFreeCup();
 		cart.applyDiscount(specialOffer2);
 
-
 		cart.printCart();
 
 
