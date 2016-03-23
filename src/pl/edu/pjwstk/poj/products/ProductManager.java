@@ -22,7 +22,7 @@ public class ProductManager {
 		return cheapest;
 	}
 	
-	public static double getSum(Product[] products){
+	public static double getSum(List<Product> products){
 		
 		if (products == null ){
 			return 0;
@@ -30,24 +30,13 @@ public class ProductManager {
 		
 	double Sum = 0;
 	
-	for(int i = 0; i<products.length; i++){
-		Sum+=products[i].getPrice();
+	for(int i = 0; i<products.size(); i++){
+		Sum+=products.get(i).getPrice();
 		}
 	
 	return Sum;
 }
 	
-	 public static void printall(Product[] products){
-		 
-		 if (products == null){
-				return;
-			}
-		 for(int i = 0; i < products.length; i++){
-			
-			 System.out.println(products[i]);
-		 }
-		
-	 }
 
 	 
 	

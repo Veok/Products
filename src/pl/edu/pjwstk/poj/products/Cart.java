@@ -38,7 +38,6 @@ public class Cart {
         }
 
 
-
     public void printCart(){
         for(Product product : products){
             System.out.println(product);
@@ -52,4 +51,3 @@ public void applyDiscount(ICanCalculateSpecialOffer specialOffer){
 }
 
 }
-

@@ -19,7 +19,7 @@ public class Main {
 		Product product3 = new Product();
 		product3.setCode("code3");
 		product3.setName("name3");
-		product3.setPrice(500);
+		product3.setPrice(20);
 
 		Cart cart = new Cart();
 		cart.addProduct(product1);
